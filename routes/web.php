@@ -34,4 +34,16 @@ Route::get('/contact', [UserController::class, 'contact']);
 
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 
-Route::get('/user/{var1}/{var2}/{var3}', [UserController::class, 'check']);
+// Route::get('/user/{var1}/{var2}/{var3}', [UserController::class, 'check']);
+
+Route::get('/users/{id}', [UserController::class, 'checkNumeric'])
+    ->where('id', '[0-9]+');
+
+
+
+Route::get('/posts/{title}', [UserController::class, 'checkAlphabit'])
+    ->where('title', '[a-Z]+');
+
+
+Route::get('/images/{size}', [UserController::class, 'checkImage'])
+->where('size', '[xl,]+');

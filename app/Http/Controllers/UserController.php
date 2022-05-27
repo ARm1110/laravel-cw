@@ -49,4 +49,21 @@ class UserController extends Controller
             echo  'page not found 404';
         }
     }
+    public function checkNumeric($var1)
+    {
+
+        echo $var1;
+    }
+    public function checkAlphabit($var1)
+    {
+
+        echo $var1;
+    }
+    public function checkImage($var1)
+    {
+
+        echo $var1;
+    }
+    
 }
+
